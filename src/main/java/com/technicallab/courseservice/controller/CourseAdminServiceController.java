@@ -30,4 +30,9 @@ public class CourseAdminServiceController {
     return courseAdminService.listCourses();
   }
 
+  @GetMapping(path = "/course_admin/healthcheck")
+  public String healthCheck() {
+    return "Admin Service is up.";
+  }
+
 }
