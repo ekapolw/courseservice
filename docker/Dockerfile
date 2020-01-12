@@ -1,3 +1,6 @@
 FROM openjdk:8u111-jdk-alpine
-ADD /Users/ekapolwongnapapan/.jenkins/workspace/CourseService-Pull-Code/target/courseservice-0.0.1-SNAPSHOT.jar courseservice.jar
-ENTRYPOINT ["java","-jar","/courseservice-0.0.1-SNAPSHOT.jar"]
+VOLUME /tmp
+EXPOSE 8888
+ARG JAR_FILE=../target/courseservice-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} courseservice.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/courseservice.jar"]
