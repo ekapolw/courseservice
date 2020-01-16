@@ -32,7 +32,7 @@ public class CourseAdminServiceController {
 
   @GetMapping(path = "/course_admin/healthcheck")
   public String healthCheck() {
-    return "Admin Service is up na ja.";
+    return "Admin Service is up na.";
   }
 
 }
