@@ -9,19 +9,14 @@
 			"name": "Test",
 			"item": [
 				{
-					"name": "Service",
+					"name": "Sweet Talk",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"",
-									"pm.test(\"Body is correct\", function () {",
+									"pm.test(\"Give Sweet Take na ja\", function () {",
 									"    pm.response.to.have.body(\"Admin Service is up na ja.\");",
 									"});"
 								],
@@ -40,6 +35,104 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9999/course_admin/healthcheck/SWEET",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"course_admin",
+								"healthcheck",
+								"SWEET"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Normal Talk",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
+								"exec": [
+									"pm.test(\"Give Normal Take na\", function () {",
+									"    pm.response.to.have.body(\"Admin Service is up na.\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9999/course_admin/healthcheck/NORMAL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"course_admin",
+								"healthcheck",
+								"NORMAL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "No Talk",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
+								"exec": [
+									"pm.test(\"Give Nothing Take Nothing\", function () {",
+									"    pm.response.to.have.body(\"\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
