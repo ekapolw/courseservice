@@ -10,7 +10,7 @@ public class CourseAdminDomain {
     String rtnMessage = "";
 
     if (sweetLevel.equals("NORMAL")) {
-      rtnMessage = "Admin Service is up na.";
+      rtnMessage = "Admin Service is up na ka.";
     } else if (sweetLevel.equals("SWEET")) {
       rtnMessage = "Admin Service is up na ja.";
     }
