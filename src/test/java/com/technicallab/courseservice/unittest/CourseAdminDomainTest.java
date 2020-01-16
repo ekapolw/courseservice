@@ -4,16 +4,17 @@ import static org.junit.Assert.assertEquals;
 
 
 import com.technicallab.courseservice.domain.CourseAdminDomain;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(MockitoJUnitRunner.class)
 public class CourseAdminDomainTest {
 
-  @InjectMocks
   private CourseAdminDomain courseAdminDomain;
+
+  @Before
+  public void initialDomain() {
+    courseAdminDomain = new CourseAdminDomain();
+  }
 
   @Test
   public void givenNormalWhenCheckHealthThenReturnNa() {
