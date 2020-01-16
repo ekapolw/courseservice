@@ -1,11 +1,13 @@
 package com.technicallab.courseservice.controller;
 
+import com.technicallab.courseservice.domain.CourseAdminDomain;
 import com.technicallab.courseservice.entities.Course;
 import com.technicallab.courseservice.service.CourseAdminService;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class CourseAdminServiceController {
 
   private CourseAdminService courseAdminService;
+  private CourseAdminDomain courseAdminDomain;
 
   @Autowired
-  public CourseAdminServiceController(CourseAdminService courseAdminService) {
+  public CourseAdminServiceController(
+      CourseAdminService courseAdminService,
+      CourseAdminDomain courseAdminDomain) {
+
     this.courseAdminService = courseAdminService;
+    this.courseAdminDomain = courseAdminDomain;
   }
 
   @PostMapping(path = "/course_admin/addCourse")
@@ -30,9 +37,16 @@ public class CourseAdminServiceController {
     return courseAdminService.listCourses();
   }
 
+  @GetMapping(path = "/course_admin/healthcheck/{sweetLevel}")
+  public String healthCheck(
+      @PathVariable("sweetLevel") String sweetLevel) {
+
+    return courseAdminDomain.healthCheck(sweetLevel);
+  }
+
   @GetMapping(path = "/course_admin/healthcheck")
   public String healthCheck() {
-    return "Admin Service is up na ja.";
+    return courseAdminDomain.healthCheck("");
   }
 
 }
