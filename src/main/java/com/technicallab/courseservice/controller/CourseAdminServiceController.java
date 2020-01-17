@@ -41,7 +41,7 @@ public class CourseAdminServiceController {
   public String healthCheck(
       @PathVariable("sweetLevel") String sweetLevel) {
 
-    return courseAdminDomain.healthCheck(sweetLevel);
+    return courseAdminDomain.healthCheck(sweetLevel) + "HANKKKK";
   }
 
   @GetMapping(path = "/course_admin/healthcheck")
