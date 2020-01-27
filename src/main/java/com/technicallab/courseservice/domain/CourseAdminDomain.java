@@ -12,7 +12,7 @@ public class CourseAdminDomain {
       if (sweetLevel.equals("NORMAL")) {
         rtnMessage = "Admin Service is up na.";
     } else if (sweetLevel.equals("SWEET")) {
-      rtnMessage = "Admin Service is up na ja.";
+      rtnMessage = "Admin Service is up na ka.";
     }
 
     return rtnMessage;
