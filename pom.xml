@@ -142,4 +142,12 @@
         </plugins>
     </reporting>
 
+    <repositories>
+        <repository>
+            <id>maven-central</id>
+            <name>MavenCentral</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
+
 </project>
