@@ -12,7 +12,7 @@
 
     <groupId>com.technicallab</groupId>
     <artifactId>courseservice</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${version}</version>
     <name>courseservice</name>
     <description>Demo project for Spring Boot</description>
 
