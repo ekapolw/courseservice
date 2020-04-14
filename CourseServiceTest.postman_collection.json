@@ -9,64 +9,15 @@
 			"name": "Test",
 			"item": [
 				{
-					"name": "Sweet Talk",
+					"name": "LIVE",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
 								"exec": [
-									"pm.test(\"Give Sweet Take na ja\", function () {",
-									"    pm.response.to.have.body(\"Admin Service is up na ja.\");",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "http://localhost:9999/course_admin/healthcheck/SWEET",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "9999",
-							"path": [
-								"course_admin",
-								"healthcheck",
-								"SWEET"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Normal Talk",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
-								"exec": [
-									"pm.test(\"Give Normal Take na\", function () {",
-									"    pm.response.to.have.body(\"Admin Service is up na.\");",
+									"pm.test(\"ORDER TO LIVE\", function () {",
+									"    pm.response.to.have.body(\"We wish to LIVE. So we live and happy.\");",
 									"});"
 								],
 								"type": "text/javascript"
@@ -91,31 +42,35 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:9999/course_admin/healthcheck/NORMAL",
+							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/LIVE",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"ec2-13-229-67-229",
+								"ap-southeast-1",
+								"compute",
+								"amazonaws",
+								"com"
 							],
 							"port": "9999",
 							"path": [
 								"course_admin",
 								"healthcheck",
-								"NORMAL"
+								"LIVE"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "No Talk",
+					"name": "DIE",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
 								"exec": [
-									"pm.test(\"Give Nothing Take Nothing\", function () {",
-									"    pm.response.to.have.body(\"\");",
+									"pm.test(\"ORDER TO DIE\", function () {",
+									"    pm.response.to.have.body(\"We force to DIE. So we go to heaven, but you go to hell.\");",
 									"});"
 								],
 								"type": "text/javascript"
@@ -140,15 +95,73 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:9999/course_admin/healthcheck",
+							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/DIE",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"ec2-13-229-67-229",
+								"ap-southeast-1",
+								"compute",
+								"amazonaws",
+								"com"
 							],
 							"port": "9999",
 							"path": [
 								"course_admin",
-								"healthcheck"
+								"healthcheck",
+								"DIE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BLANK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c0257a70-2654-4052-a0f8-12b88bfba3c2",
+								"exec": [
+									"pm.test(\"NO ORDER\", function () {",
+									"    pm.response.to.have.body(\"What!!! We don't understand you. Please speak English.\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/",
+							"protocol": "http",
+							"host": [
+								"ec2-13-229-67-229",
+								"ap-southeast-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"port": "9999",
+							"path": [
+								"course_admin",
+								"healthcheck",
+								""
 							]
 						}
 					},
