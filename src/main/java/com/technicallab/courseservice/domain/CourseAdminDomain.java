@@ -5,14 +5,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseAdminDomain {
 
-  public String healthCheck(String sweetLevel) {
+  public String healthCheck(String liveOrDie) {
 
-    String rtnMessage = "";
+    String rtnMessage;
 
-      if (sweetLevel.equals("NORMAL")) {
-        rtnMessage = "Admin Service is up na.";
-    } else if (sweetLevel.equals("SWEET")) {
-      rtnMessage = "Admin Service is up na ja.";
+    if (liveOrDie.equals("LIVE")) {
+      rtnMessage = "We wish to " + liveOrDie + ". So we live and happy.";
+    } else if (liveOrDie.equals("DIE")) {
+      rtnMessage = "We force to " + liveOrDie + ". So we go to heaven, but you go to hell.";
+    } else {
+      rtnMessage = "What!!! We don't understand you. Please speak English.";
     }
 
     return rtnMessage;

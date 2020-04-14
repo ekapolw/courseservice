@@ -18,17 +18,17 @@ public class CourseAdminDomainTest {
 
   @Test
   public void givenNormalWhenCheckHealthThenReturnNa() {
-    assertEquals("Admin Service is up na.", courseAdminDomain.healthCheck("NORMAL"));
+    assertEquals("We wish to LIVE. So we live and happy.", courseAdminDomain.healthCheck("LIVE"));
   }
 
   @Test
   public void givenSweetWhenCheckHealthThenReturnNaJa() {
-    assertEquals("Admin Service is up na ja.", courseAdminDomain.healthCheck("SWEET"));
+    assertEquals("We force to DIE. So we go to heaven, but you go to hell.", courseAdminDomain.healthCheck("DIE"));
   }
 
   @Test
   public void givenSpicyWhenCheckHealthThenReturnNothing() {
-    assertEquals("", courseAdminDomain.healthCheck("SPICY"));
+    assertEquals("What!!! We don't understand you. Please speak English.", courseAdminDomain.healthCheck(""));
   }
 
 }
