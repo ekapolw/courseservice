@@ -12,7 +12,7 @@
 
     <groupId>com.technicallab</groupId>
     <artifactId>courseservice</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>courseservice</name>
     <description>Demo project for Spring Boot</description>
 
@@ -117,6 +117,21 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <version>5.3.0</version>
+              <configuration>
+                  <failBuildOnCVSS>10</failBuildOnCVSS>
+              </configuration>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>check</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -153,5 +168,14 @@
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
-
+         
+    <distributionManagement>
+        <snapshotRepository>
+             <uniqueVersion>false</uniqueVersion>
+             <id>nexus-snapshots</id>
+             <url>http://nexus:8081/repository/maven-snapshots/</url>
+             <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+        
 </project>
