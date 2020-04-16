@@ -37,11 +37,11 @@ public class CourseAdminServiceController {
     return courseAdminService.listCourses();
   }
 
-  @GetMapping(path = "/course_admin/healthcheck/{sweetLevel}")
+  @GetMapping(path = "/course_admin/healthcheck/{liveOrDie}")
   public String healthCheck(
-      @PathVariable("sweetLevel") String sweetLevel) {
+      @PathVariable("liveOrDie") String liveOrDie) {
 
-    return courseAdminDomain.healthCheck(sweetLevel);
+    return courseAdminDomain.healthCheck(liveOrDie);
   }
 
   @GetMapping(path = "/course_admin/healthcheck")
