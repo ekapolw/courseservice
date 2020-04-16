@@ -10,7 +10,7 @@ public class CourseAdminDomain {
     String rtnMessage;
 
     if (liveOrDie.equals("LIVE")) {
-      rtnMessage = "We wish to " + liveOrDie + ". So we live and happier.";
+      rtnMessage = "We wish to " + liveOrDie + ". So we live and happy.";
     } else if (liveOrDie.equals("DIE")) {
       rtnMessage = "We force to " + liveOrDie + ". So we go to heaven, but you go to hell.";
     } else {
