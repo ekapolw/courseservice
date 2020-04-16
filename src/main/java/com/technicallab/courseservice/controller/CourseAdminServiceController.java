@@ -41,7 +41,7 @@ public class CourseAdminServiceController {
   public String healthCheck(
       @PathVariable("liveOrDie") String liveOrDie) {
 
-    return courseAdminDomain.healthCheck(liveOrDie) + "XXX";
+    return courseAdminDomain.healthCheck(liveOrDie);
   }
 
   @GetMapping(path = "/course_admin/healthcheck")
