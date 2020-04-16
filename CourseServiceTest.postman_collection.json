@@ -42,10 +42,10 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/LIVE",
+							"raw": "http://ec2-54-169-224-153.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/LIVE",
 							"protocol": "http",
 							"host": [
-								"ec2-13-229-67-229",
+								"ec2-54-169-224-153",
 								"ap-southeast-1",
 								"compute",
 								"amazonaws",
@@ -95,10 +95,10 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/DIE",
+							"raw": "http://ec2-54-169-224-153.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/DIE",
 							"protocol": "http",
 							"host": [
-								"ec2-13-229-67-229",
+								"ec2-54-169-224-153",
 								"ap-southeast-1",
 								"compute",
 								"amazonaws",
@@ -148,10 +148,10 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://ec2-13-229-67-229.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/",
+							"raw": "http://ec2-54-169-224-153.ap-southeast-1.compute.amazonaws.com:9999/course_admin/healthcheck/",
 							"protocol": "http",
 							"host": [
-								"ec2-13-229-67-229",
+								"ec2-54-169-224-153",
 								"ap-southeast-1",
 								"compute",
 								"amazonaws",
